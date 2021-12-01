@@ -1,0 +1,48 @@
+
+body{
+    margin: 0;
+}
+nav{
+    display: flex;
+}
+nav > .Logo{
+    flex: none;
+    /*沒有彈性，固定尺寸*/
+    width: 100px;
+    background-color: #ffcccc;
+}
+nav > .menu{
+    flex: auto;
+    /*此為flex非常重要的特性，盡量把容器空間塞滿*/
+    background-color: #ccccff;
+}
+nav > .user{
+    flex: none;width: 100px;
+    background-color: #ccffcc;
+}
+/*main 樣式設定*/
+main{
+    display:flex;/*第一步驟:顯示模式*/;flex-wrap: wrap;/*容器中的項目才有換行的狀況(關鍵)*/
+    justify-content: center;
+    /*第三步驟 補充，靠左(垂直對齊靠上方)為flex-start有方向性的問題，一般由左到右，靠右(垂直對齊靠下方)為flex-end*/
+    /*align-item:strech(垂直對齊:預設值，將其他項目延展)center(垂直對齊:靠中)flex-start(靠上方);*/
+    /*justify-content(設定水平對齊:左中右)和align-item(設定垂直對齊:靠上、中、下)專門搭配Flex*/
+    background-color: #cccccc;
+}
+main>.item{/*項目*/
+flex:none;/*第二步驟:代表此項目的處理方式:無法彈性縮放*/
+width: 270px;
+margin: 10px;
+background-color: #ffcccc;
+}
+@media screen (max-width:1200px) {
+    main>.item{
+        width:45%;/*代表放兩個item會差不多一半，留margin的空間*/
+    }
+@media screen (max-width:500px){ main>.item{
+    width:90%;
+}
+    
+}
+    
+}

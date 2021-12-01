@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*標籤名稱選擇器*/
+        body{
+            font-size: 16px;font-family:微軟正黑體;
+        }
+        h3{font-size: 24px;text-decoration: underline;}
+        /*class選擇器*/
+        div.content{
+            padding: 10px;border: 1px dashed #8888;
+        }
+        /*div標籤 class叫做content才套用*/
+        /*id選擇器*/
+        /*主要用在Java script因此使用上較不彈性*/
+        #btn{
+            border: 1px solid #8888;
+            background-color: #fff ;
+            padding: 5px;
+        }
+        /*虛擬選擇器:搭配其他選擇器使用*/
+        /*:hover 虛擬選擇器，意即當滑鼠移到目標上時，套用一組設定*/
+        #btn:hover{
+            background-color: #888;
+        }
+        /*:focus 虛擬選擇器:當目標標取得焦點時，套用一組設定*/
+        input:focus{
+            border: 2px solid #ff0000;
+        }
+        /*階層式選擇器:搭配其他選擇器使用*/
+        .favorite a{
+            color: #8888;}
+            /*超連結在Favorite之中才套用*/
+        .demo a{
+            color: #fa0;}
+
+    </style>
+</head>
+<body>
+    <h3>自我介紹</h3>
+    <div class="content">
+        大家好我是蕙萍
+    </div>
+    <h3>我的最愛</h3>
+    <ul class="favorite">
+        <li>
+            <a href="#">google</a>
+        </li>
+        <li>
+            <a href="#">facebook</a>
+        </li>
+    </ul>
+    <h3>我的作品</h3>
+    <ul class="demo">
+        <li>
+            <a href="#">紙雕作品</a>
+        </li>
+        <li>
+            <a href="#">繪畫作品</a>
+        </li>
+    </ul>
+    <h3>和我連絡</h3>
+    <div class="content">
+        填寫訊息<input type="text" /> <button id="btn">送出</button>
+    </div>
+</body>
+</html>
