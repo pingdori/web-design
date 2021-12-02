@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!--變數與運算子
+a.資料:數字、字串、布林值、物件
+b.變數:可存放資料的空間，可命名
+c.運算子:可對資料做操作的符號-->
+<script type="text/javascript">
+    //單行註解
+    /*多行註解*/
+    /*資料:
+    a.數字:15;15.555
+    b.字串(任意文字)用雙引號或單引號包裹:"這是文字"
+    c.布林值:true;false
+    d.物件*/
+    /*變數:
+    資料可以放進變數裡，如同將物品放進箱子中
+    將資料放進變數前，要先對變數做宣告，宣告變數寫法，如下
+    var x;可以想像當程式碼執行至此，系統多了個箱子(變數)叫x，一開始箱子是空的，我們可以將資料置入如:x=15，注意等號。示範如下:*/
+    /*var x;
+    x=15;
+    alert(x);
+    x="我是蕙萍"//一個變數只能放一個資料，新的進入舊的會消失
+    alert(x);
+    //看程式語言時要注意前後文，不同的時間點會造成不同結果
+    var y=true;*/
+    /*運算子:
+    就是符號，可以對資料做運算，只要對系統做任何動作都稱作運算，在此泛指對程式做的任何動作*/
+    /*15+20;
+    alert(15+20);
+    var result=15-15;
+    //看到等號先看等號右方
+    alert(result);
+    //單元運算，可以將單元中的數字+1,並存放回變數中
+    result++;
+    alert(result);
+    result=result+1;//result++;
+    result--;*/
+    //比較運算子，如:4>3，是我們用程式碼來詢問4是否大於3，電腦會用ture回傳
+    /*4>3;
+    result=4>3;//>=、<=、==(兩個等號是比較，比較4跟3是否完全相等，一個等號是把資料放進變數中)
+    /*alert(result);
+    var data=3
+    result=data*data
+    alert(result);
+    alert(data);//此處data仍是3，除非有用指定運算=，去將資料覆蓋至變數中，否則變數資料不動*/
+    //範例
+    /*對使用者有意義的程式，最關鍵的概念是可輸入、輸出，讓你的程式做運算，將結果顯示給使用者
+    輸入:prompt(提示語,預設值)->程式運算->輸出alert(資料)*/
+    var n1=prompt("請輸入數字","1");//此段命令會呼叫系統內建的函式，系統會幫你顯示訊息框給使用者輸入，會將資料帶回呼叫結果
+    var n2=prompt("請輸入數字","1");
+    var result=n1*n2;
+    alert(result);
+</script>
+</head>
+
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+    /*流程控制，
+    a.判斷式
+    b.迴圈*/
+    /*
+        if(判斷){
+        若判斷的結果是正確的(ture)，則執行大括號區塊中的程式碼。反之(false),則忽略此區塊。
+    */
+    /*if(ture){
+        alert("hi");}*/
+
+    //最主要是布林值的資料，以上程式碼意為，當小括號中的資料是ture時會顯示警告視窗的程式碼，若小括號為false則會跳過警告，常見用途會再小括號寫運算式(比較運算)
+    /*var money=prompt("要提多少錢","");
+    if(money>30000){
+        alert("不能提款");
+    }else{
+        alert("恭喜，錢錢給你ㄌ")
+    }*/
+        /*
+        if(判斷){
+        若判斷的結果是正確的(ture)，則執行大括號區塊中的程式碼。}
+        else{
+            若判斷是錯誤的(false)，則執行else大括號區塊中的程式碼
+        }
+    */
+   //判斷成功時要做事，不成功也要做事
+   /*
+        if(判斷一){
+        先做第一次判斷，若正確(ture)，執行此區塊程式碼。若第一次判斷錯誤(false)，繼續進行下方else if的第二次判斷。}
+        else if(判斷二){
+            同上
+        }
+        else{
+            若以上所有判斷都是錯誤的(false)，則執行else區塊中的程式碼
+        }*/
+        /*var n=prompt("請輸入數字","");
+        if (n>500){
+            alert(n+">500");//若n大於500則告訴n大於500
+        }else if(n>300){
+            alert(n+">300");//若上述錯則判斷n是否大於300
+        }else{
+            alert(n+"<=300");//最後的判斷
+        }*/
+        //範例
+        var n1=prompt("請輸入數字","");
+        var n2=prompt("請輸入數字","");
+        //使用者雖輸入數字，但電腦得到的是一字串
+        //"5"不等於5
+        //要做資料型態的轉換:把字串轉換成數字
+        n1=Number(n1);//number(資料)
+        n2=Number(n2);
+        var op=prompt("請輸入運算:+、-、*、/","");
+        var result;
+        if(op=="+"){}
+        else if(op=="-"){result=n1+n2;}
+        else if(op=="*"){result=n1-n2;}
+        else if(op=="/"){result=n1/n2;}
+        else{
+            result="不合法運算";
+        }
+        alert(result);
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
