@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        /*流程控制，
+    a.判斷式
+    b.迴圈
+        b-1 while
+        b-2 for
+    */
+   /*while(判斷){
+       若判斷的結果是正確的(ture)，執行大括號區塊中的程式碼。
+       程式碼執行完畢，回到上方while的位置，做第二次判斷。
+       直到判斷結果是錯誤的(false),才跳離整個迴圈結構。
+   }
+   */
+  /*var n=0;
+  while(n<=50){
+    n++;
+  }
+  alert(n);*/
+  /*var sum=0;
+  var i=1;
+  while(i<=100){
+      sum=sum+i;//sum+=i;
+      i++;
+      }
+      alert(sum);*/
+  //n=51
+  //n會一直+1直到大於50，才會==false離開
+  //程式碼會無窮迴圈，實際使用要小心
+   /*for{可與while替代，for迴圈可將重要變數加入結構之中
+       (初始區塊；判斷；迴圈區塊){
+           判斷概念同while迴圈。
+           請在講解中，注意「初始區塊」與「迴圈區塊」的執行時機。
+       }
+       for(初始化命令;判斷是否繼續下一次迴圈;每次迴圈後執行){
+    迴圈中的程式碼區塊;
+}
+   }*/
+  /*var sum=0;
+  
+  for(var i=1;i<=100;i++){//為何有分號?因在寫程式時會寫進控制變數，亦可寫進迴圈的結構中做初始化的宣告
+    //亦即繞上來先做一次i++再做判斷
+     sum=sum+i;//sum+=i;
+      }
+      alert(sum);*/
+      /*迴圈的兩個命令:
+      bleak;強制跳出迴圈
+      continue;強制進行下一次迴圈*/
+      /*var n=0;
+      while(n<=100){
+          if(n==50){
+              break;
+          }
+          n++;
+      }
+      alert(n);*/
+      var x=0;
+      for(var n=0;n<=100;n++){
+          if(n%4==0){//n/4取餘數等於0等於n能夠被4整除
+              continue;
+          }
+          x++;//有四分之一的機會X++會被忽略，X只加了75次
+      }
+      alert(x);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
