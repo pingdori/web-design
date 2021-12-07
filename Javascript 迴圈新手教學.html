@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        /*1+2...+50 運算流程*/
+        /*var sum=0;
+        var n=1;
+        while(n<=50){
+            sum=sum+n;
+            n++;
+        }
+        alert(sum);*/
+        /*
+        看到一個迴圈的結構，開始追蹤程式在迴圈中發生了甚麼，即是"和迴圈相關的變數追蹤"
+        
+        步驟一 在程式碼中甚麼和變數有關 如SUM和N
+        0:
+            sum:0,n:1
+        1:
+            sum:1,n:2
+        2:  
+            sum:3,n:3
+        3:
+            sum:6,n:4
+            ...
+            50次
+            sum:1275,n:51->即離開迴圈
+
+        */
+    
+       /*continue命令與執行流程
+       var x=0;
+       for(var i=0;i<100;i==){
+       }*/
+       /*continue命令與執行流程*/
+       var x=0;
+       for(for i=0;i<100;i++){
+           if(i%2==0){
+               continue;
+           }
+           x++;
+       }
+       alert(x);
+       /**
+        * 0:
+        *   X:0,i:0
+        * 1:
+        *   x:0,i:1
+        * 2:
+        *   x:1,i:2
+        * 3:
+        *   x:1,i:3
+        * ...
+        * 100:
+        *   X:50,i:100
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

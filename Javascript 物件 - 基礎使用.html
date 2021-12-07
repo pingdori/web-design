@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*物件教學
+        a.基本物件設計
+        b.使用建構式*/
+        //建立空白物件
+        var point=new Object(); //他甚麼都不是他只是個東西的概念
+        //建立物件的成員(屬性與方法)
+        /*若想做平面座標系統中的點，至少需要X與Y座標，需要物件的成員，即跟在物件身上的資料，想要甚麼東西就附帶甚麼資料*/
+        //point.x=3;//屬性，物件中不是裝函式皆為屬性
+        //point.y=4;
+        ///point.getPosition=function(){//方法
+            //alert(this.x+","+this.y);};
+            //取得點的位置,this為物件本身
+        //使用物件
+        //alert(point.x);
+        //point.getPosition();呼叫getPosition的意思
+        //綜合範例:遊戲中的玩家設計
+        var player=new Object();
+        player.name="Jhon";
+        player.hp=100;
+        player.fight=function(){
+            this.hp=this.hp-2;
+        };
+        player.rest=function(){
+            this.hp++;
+        };
+        player.report=function(){
+            alert(this.name+":"+this.hp);};
+        player.fight();
+        player.rest();
+        player.report();
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        alert(window.screen.width+"x"+window.screen.height);
+
+        /*function change(){
+        修改的程式用彈性來做包裝，找出變動目標，此處為body標籤
+        window.document.body.innerHTMLbody內部的HTML="Hello world";}*/
+        function change(){
+        var spanObj=document.getElementById/*利用ID取得一個元素，document物件定義的方法*/("emotion");
+        spanObj.innerHTML="bad";//此標籤物件等同於下方的 <span id="emotion">good</span>
+        //剛剛是操作body，現在是取得span標籤
+        //CSS修改如下
+        spanObj.style.color="red"
+        spanObj.style.fontWeight/*JS沒有橫槓，後面的字首字大寫*/="bold";
+        spanObj.style.display="none";
+        }
+    </script>
+</head>
+<body>
+    <!--如何寫程式來稍微操控網頁畫面?
+    HTML DOM是處理Javascript畫面的重要關鍵-->
+    <div>
+        Today is a <span id="emotion">good</span> day. Let's go to movie.
+        <!--修改任何內容是以標籤為單位-->
+        id屬性
+    </div>
+    <!--舉例:fb點讚會出現按讚數字的變化，即是小小的更新-->
+    <button onclick="change();">change</button>
+    <!--要讓程式碼反映使用者的動作，稱作事件處理，在任何標籤上寫onclick此屬性就代表當使用者點擊這個按鈕的時後呼叫change函式執行程式碼做出畫面的修改-->
+    <!--希望點擊按鈕對網頁做些修改-->
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*函式教學
+        a.函式基礎
+        b.函式變形與名稱空間*/
+
+        //內建函式:系統預先寫好的程式碼，利用名稱和小括號來進行呼叫，呼叫後就會執行
+        //alert("Hello world");
+
+        //函式的基礎
+
+        //設計階段
+        function test(message/*參數名稱，自行決定*/){//函式本體
+        alert(message);
+    }
+        /*代表自己要設計的函式 命名*/
+        /*建立一個函式如同建立一個機器，放進倉庫中，要使用才會動，因此要做明確的呼叫*/
+        /*參數可做出彈性，上面的範例中alert()內的"message"非顯示結果，顯示的資料端看下方呼叫的文字決定*/
+
+        //呼叫/使用階段
+        test("hello world"/*傳入函式的參數資料*/);
+        test("hello javascript");
+
+        //執行流程:程式碼由上到下一行一行的看，看到函式的時候要看函式的開頭和結尾，看到函式的時候可以先跳過，因其內程式碼暫時不會執行，直到函式呼叫，呼叫的意思即程式執行的流程會跳進函式的內部，呼叫完畢便顯示函式，完畢後跳回進行下一步
+
+        //若有兩個參數要如何寫?
+        /*function add(n1,n2){
+        alert(n1+n2)};
+        add(3,4);
+        add(10,15);*/
+
+        //回傳值的說明
+        function add(n1,n2){
+            alert(n1+n2);
+        }
+        var result=add(3,4);
+        alert(result);
+        //第一次印出7，第二次印undefined，若加入回傳值為10 add(3,4)則為10
+
+        function add(n1,n2){
+        alert(n1+n2);
+        //return 10;//回傳值，代表函式結束，函式回傳至呼叫的位置，一個 function 只要沒有設定回傳值的時候，他就會回傳 undefined至呼叫的位置。
+        return n1+n2;//我們會希望回傳值和函式功能連動
+    }
+        var result=add(3,4)*add(10,20);
+        alert(result);
+        //第一次印7，第二次30，第三次在外部做運算印210
+
+        //整合範例
+        //function可將常用的函式包裝起來，需要時便可使用
+        //1+2+3+...50=1275的寫法:
+        var sum=0;
+        var n=1;
+        while(n<=50){
+            sum+=n;
+            n++;
+        }
+        alert(sum);
+
+        //彈性處理
+        function getsum(max//加到最大值){//function有包裝的功能，可將常用的函式包裝起來，需要時只需呼叫便可使用
+            var sum=0;
+            var n=1;
+            while(n<=max){
+                sum+=n;//sum=sum+n
+                n++;
+        }
+            alert(sum);
+            return sum;
+        }
+        var result=getsum(50)*getsum(50);
+        alert(result);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

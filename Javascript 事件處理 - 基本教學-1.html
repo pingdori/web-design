@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*事件處理:當使用者在畫面做一個動作，畫面要做出反應，如使用者的點擊*/
+        function over(element){
+            element.style.color="red";
+        }
+        function out(element){
+            element.style.color="black";
+        }
+        //如此寫的好處:1.易閱讀2.當網頁較複雜可輕鬆維護、套用
+    </script>
+</head>
+<body>
+    <button onclick="alert('clicked');">
+        click
+    </button>
+    <!--<span onmouseover="this.style.color='red';" onmouseout="this.style.color='black';">當滑鼠移動/離開到此區塊產生事件,在事件處理的程式碼中可以用this代表這個標籤</span>-->
+    <span onmouseover="over(this);" onmouseout="out(this);">當滑鼠移動/離開到此區塊產生事件,在事件處理的程式碼中可以用this代表這個標籤</span>
+</body>
+</body>
+</html>

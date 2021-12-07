@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*函式教學
+        a.函式基礎
+        b.函式變形與名稱空間
+        */
+       /*function add(n1+n2){
+           alert(n1+n2);
+       }*/
+       //下方寫法，把函式寫入變數中，函式是一種資料，因此可以以此做操作
+       /*var add=function(n1,n2){
+           alert(n1+n2);
+       };
+       add(31,15);
+       var test=add;//沒有小括號沒有呼叫，代表函式本體
+       test(10,20);//因此可以呼叫add*/
+       /*var x=3,
+       x="string";
+       x=function(){alert("hellow");};
+       x();*/
+
+       //函式創造新的名稱空間
+       var x=3;//使用變數會做宣告，但不可再創兩個變數如:var x=5,全域空間，全域變數
+       function test(){
+        var y=5;//區域空間，區域變數
+        var x=9;
+        alert(x+y);//會先搜尋內部，再搜外部
+       }//函式大括號內不是一個新的名稱空間，新的變數倉庫，函式外是共用，函式內是私有倉庫
+       alert(X);
+       //外部的程式碼，不能使用內部的變數
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

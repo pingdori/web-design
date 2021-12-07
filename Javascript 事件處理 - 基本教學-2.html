@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //用Javascript的程式，來動態的註冊事件處理器的註冊
+        function init(){
+            var btn=document.getElementById("btn");
+            /*btn.onclick=function(){
+                alert("clicked");
+            }*/
+            //把butten物件抓至程式的變數中
+            /*function(){
+                alert("clicked")為事件處理器*/
+            //以下為近代的處理方式
+            var handler=function(){
+                //準備一個事件處理器(對應事件的函式)
+            alert("clicked");
+            };
+            btn.addEventListener("click"/*事件的名稱*/,handler);
+            //事件註冊，把事件跟處理器做關聯
+        }
+    </script>
+</head>
+<body onload="init();">
+    <!--load事件註冊在body標籤上就會幫我們偵測網頁靜態內容，是否完全載入，載入成功觸發Load事件，執行init-->
+    <!--若想要網頁一載入註冊點擊事件在按鈕上，就產生效果-->
+    <button id="btn">click</button>
+    <!--上述動作即是:在HTML加入事件處理的程式碼，其他的作法，用Javascript來動態的註冊事件-->
+</body>
+</html>
