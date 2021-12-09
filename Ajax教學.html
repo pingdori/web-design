@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax標籤選單</title>
+    <script>
+        function getData(pageName){
+            //Ajax:XMLHttpRequest 物件專門用來和伺服器做連線
+            /*步驟一:創立XMLHttpRequest物件*/var req=new XMLHttpRequest();
+            /*步驟二:設定連線網址*/req.open("get","http://127.0.0.1:5500/"+pageName);
+            /*利用load測試是否連線完成*/req.onload=function(){
+                //步驟四:lode事件，偵測連線狀態結束 //連線完成
+                /*步驟五:若連線完成觸發Load事件做連線後的處理，把得到的內容塞進DIV中*/var content=document.getElementById("content");
+                content.innerHTML=this.responseText;//取得DIV並把取得內容放進DIV中//responseText此為物件的成員取得伺服器的回應
+            }
+            /*第三步驟:送出連線*/req.send();//送出連線
+//當連線送出，透過網際網路連線伺服器，並成功取回資料後，會觸發XMLHttpRequest load事件，最後連線完成
+        }//函式要和後端的伺服器要求網頁，利用JAVASCRIPT重要的物件
+    </script>
+</head>
+<body onload="getData('NEW.HTML');">
+    <div >
+        <span onclick="getData('HOT.html');">熱門</span>
+        <!--要去取得資料-->
+        <span onclick="getData('NEW.html');">最新</span>
+    </div>
+    <hr/>
+    <div id="content"></div>//用來存放結果
+    <!--Ajax牽扯到網頁的前端和後端，因此要全面地看網站的設計-->
+    <!--內容沒有事先放在伺服器中，是需要時再向伺服器要求-->
+    <!--用Javascript和伺服器做連線，替代輸入網址得到網頁的工作-->
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var timer;
+        function init(){
+            timer=document.getElementById("timer");
+            window.setInterval(countdown,1000);
+        }//setTimeout提供一個函式countdown，在提供一毫秒為單位的時間，執行一次就停下來
+        //setInterval是每秒鐘執行一次countdown不會停
+        function countdown(){
+            timer.innerHTML=timer.innerHTML-1;
+            if(timer.innerHTML>0){//還沒倒數倒0，繼續倒數
+                //window.setTimeout(countdown,1000);
+            }else{//若以倒數倒0，做該做的工作
+                document.location="http://www.yahoo.com.tw/";
+            }
+            window.setTimeout(countdown,1000);
+        }
+//排程的概念:是請程式在一段時間之後進行執行
+    </script>
+</head>
+<body onload="init();">
+    <span id="timer">3</span>
+</body>
+</html>

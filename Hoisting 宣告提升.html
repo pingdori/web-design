@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*前端工程師面試的常見議題
+        a.變數與函式的宣告提升Hoisting
+        b.閉包closure的觀念與用途*/
+        //var x;//宣告變數，在大部分程式中先宣告是好習慣，但特別的特性，是把變數宣告寫在後面，依然可以運作，因Javascript在看程式碼時會將宣告提升到最前面，再執行
+        //x=10;//給訂初始資料
+        //alert(x);//使用變數
+
+        //alert(x);
+        //var x=10;//宣告變數，同時給定初始資料，會印出未辨識，因為兩個動作，只有被提升變數宣告，資料給定只是使用變數 var x;x=10;
+       
+        //function test(){//函式宣告，會被提升到最上方
+            //alert("hello");
+        //}
+        test();//呼叫函式
+        var test=function (){//如此寫變數test宣告提升，函式資料指定未提升
+            alert("hello");
+        }
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

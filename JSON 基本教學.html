@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //JSON:Javascript Object Notation(JavaScript 物件表示法)
+        /*JAVASCRIPT物件做法:
+            var point=new Object();
+            point.x=3;
+            point.y=4;
+            point.get=function(){
+                    alert(this.x+","+this.y)
+            };
+        */
+        /*JSON可以輕鬆的表示物件，格式如下*/
+        var point={
+            "x":3,
+            "y":4,
+            "get":function(){
+                alert(this.x+","+this.y)
+            }
+        };
+        //point.get();
+        /*物件轉JSON字串，用來傳輸給後端的程式*/
+        //console.log(point);
+
+        /*
+        物件結構與JSON格式字串轉換，使用內建JSON物件中的方法。
+        使用JSON.stringify(物件)；將物件轉換成JSON格式的字串，但會忽略函式的部分
+        使用JSON.parse(JSON格式字串);將字串轉換成物件結構
+        */
+
+        var jsonStr=JSON.stringify(point);//把要轉換的物件放入
+        console.log(jsonStr);//印在console上，已成為扁平的字串
+        //jsonStr.indexof();可以使用因為是字串
+        
+         //可以把JSON轉換成原始物件，把JSON格式字串放入，便會詮釋為物件結構
+        var plainObj=JSON.parse(jsonStr);
+        console.log(plainObj);//印出plainObj
+        alert(plainObj.x);
+    </script>
+</head>
+<body>
+    <!--JSON是很受歡迎的資料格式，正被廣泛利用，在JAVASCRIPT更是如此-->
+</body>
+</html>
